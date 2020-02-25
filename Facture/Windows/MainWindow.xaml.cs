@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Facture.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +25,15 @@ namespace Facture
         {
             InitializeComponent();
 
-            dateLabel.Text = "Today's Date: " + DateTime.Now.ToString("dddd, MMM dd yyyy");
+            itemsButton.Click += ItemsButton_Click;
+
+            dateLabel.Text = DateTime.Now.ToString("dddd, MMM dd yyyy");
         }
 
+        private void ItemsButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItemsWindow itemsWindow = new ItemsWindow() { Owner = this };
+            itemsWindow.ShowDialog();
+        }
     }
 }

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facture"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800" Background="#DCDCDC">
     <Grid>
         <Grid.RowDefinitions>
@@ -16,7 +17,7 @@
                    HorizontalAlignment="Left"
                    Margin="5"
                    FontWeight="Heavy"/>
-        <StackPanel VerticalAlignment="Center" Grid.Row="0">
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="0">
             <TextBlock Text="Welcome to Facture"
                        HorizontalAlignment="Center"
                        FontSize="40"
@@ -39,7 +40,7 @@
                     FontSize="20"
                     Margin="5 0 5 0"
                     Background="DarkGray" />
-            <Button x:Name="addItemsButton"
+            <Button x:Name="itemsButton"
                     Content="Add Items"
                     Height="35"
                     FontSize="20"

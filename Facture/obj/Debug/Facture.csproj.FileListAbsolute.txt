@@ -9,7 +9,6 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\bin\Debug\SQLitePCLRaw.
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\bin\Debug\SQLitePCLRaw.core.dll
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\bin\Debug\SQLite-net.xml
-D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.csprojAssemblyReference.cache
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\App.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture_Content.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture_MarkupCompile.cache
@@ -22,3 +21,9 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.exe
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.pdb
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\MainWindow.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\MainWindow.baml
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\ItemsWindow.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\ItemsWindow.baml
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\ItemControl.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\ItemControl.baml
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.csprojAssemblyReference.cache
