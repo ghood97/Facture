@@ -1,6 +1,7 @@
 ﻿using Facture.Classes;
 using SQLite;
 using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,26 +31,61 @@ namespace Facture.Windows
             items = new List<Item>();
 
             saveItemButton.Click += SaveItemButton_Click;
+            itemGridView.MouseDoubleClick += ItemGridView_MouseDoubleClick;
+        }
+
+        private void ItemGridView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Item selectedItem = (Item)itemGridView.SelectedItem;
+            if (selectedItem != null)
+            {
+                EditItemWindow editItemWindow = new EditItemWindow(selectedItem);
+                editItemWindow.ShowDialog();
+            }
+            GetItems();
+            
         }
 
         private void SaveItemButton_Click(object sender, RoutedEventArgs e)
         {
-            Item item = new Item()
-            {
-                Name = newItemNameBox.Text,
-                Price = double.Parse(newItemPriceBox.Text),
-                Unit = newItemUnitBox.Text
-            };
+            string name;
+            double price;
+            string unit;
 
-            // Connects to database -- `using` statement closes connection after
-            using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+            // check to make sure string fields arent empty
+            if(newItemNameBox.Text != "" && newItemUnitBox.Text != "")
             {
-                // Creates the Contact table. Will be ignored if table already exists.
-                connection.CreateTable<Item>();
-                connection.Insert(item);
+                name = newItemNameBox.Text;
+                unit = newItemUnitBox.Text;
+                if (Double.TryParse(newItemPriceBox.Text, out price))
+                {
+                    Item item = new Item()
+                    {
+                        Name = name,
+                        Price = price,
+                        Unit = unit
+                    };
+                    // Connects to database -- `using` statement closes connection after
+                    using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+                    {
+                        // Creates the Contact table. Will be ignored if table already exists.
+                        connection.CreateTable<Item>();
+                        connection.Insert(item);
+                    }
+
+                    ResetTextBox();
+                    GetItems();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please Enter a real dollar amount in the 'Price' field.");
+                }
             }
-            ResetTextBox();
-            GetItems();
+            else
+            {
+                MessageBox.Show("You must enter a value for all fields.");
+            }
         }
 
         void GetItems()

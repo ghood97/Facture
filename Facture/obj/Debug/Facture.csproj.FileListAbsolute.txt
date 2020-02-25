@@ -27,3 +27,5 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\Item
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\ItemControl.baml
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.csprojAssemblyReference.cache
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EditItemWindow.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EditItemWindow.baml

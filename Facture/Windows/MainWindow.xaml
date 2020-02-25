@@ -41,7 +41,7 @@
                     Margin="5 0 5 0"
                     Background="DarkGray" />
             <Button x:Name="itemsButton"
-                    Content="Add Items"
+                    Content="Manage Items"
                     Height="35"
                     FontSize="20"
                     Margin="5 0 5 0"

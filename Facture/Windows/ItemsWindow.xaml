@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterOwner"
         Title="ItemsWindow" Height="425" Width="700">
+
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -30,7 +31,7 @@
                     <Grid Margin="10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2.9*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
@@ -49,25 +50,31 @@
                                Margin="0 0 0 10"/>
                         <Label Grid.Row="1"
                            Grid.Column="0"
-                           Content="Name:" />
+                           Content="Name:"
+                           Margin="0 0 0 5"/>
                         <TextBox Grid.Row="1"
                              Grid.Column="1"
                              x:Name="newItemNameBox"
-                             Margin="0 0 0 5"/>
+                             Margin="0 0 0 5"
+                             FontSize="15"/>
                         <Label Grid.Row="2"
                            Grid.Column="0"
-                           Content="Price:"/>
+                           Content="Price: $"
+                           Margin="0 0 0 5"/>
                         <TextBox Grid.Row="2"
                              Grid.Column="1"
                              x:Name="newItemPriceBox"
-                             Margin="0 0 0 5"/>
+                             Margin="0 0 0 5"
+                             FontSize="15"/>
                         <Label Grid.Row="3"
                            Grid.Column="0"
-                           Content="Unit:" />
+                           Content="Unit:"
+                               Margin="0 0 0 5"/>
                         <TextBox Grid.Row="3"
                              Grid.Column="1"
                              x:Name="newItemUnitBox"
-                             Margin="0 0 0 5"/>
+                             Margin="0 0 0 5"
+                             FontSize="15"/>
                         <Button x:Name="saveItemButton"
                                 Grid.Row="4"
                                 Grid.Column="1"
@@ -82,7 +89,8 @@
                     BorderThickness="2"
                     Padding="8">
                 <DataGrid x:Name="itemGridView"
-                          AutoGenerateColumns="False">
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False">
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="Name" IsReadOnly="True" Width="3*">
                             <DataGridTemplateColumn.CellTemplate>
@@ -91,17 +99,28 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTemplateColumn Header="Price" IsReadOnly="True" Width="*">
+                        <DataGridTemplateColumn Header="Price $" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Price}" FontSize="15" />
+                                    <TextBlock FontSize="15"
+                                               HorizontalAlignment="Center">
+                                        <TextBlock.Text>
+                                            <Binding Path="Price">
+                                                <Binding.StringFormat>
+                                                    ${0}
+                                                </Binding.StringFormat>
+                                            </Binding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                         <DataGridTemplateColumn Header="Unit" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Unit}" FontSize="15" />
+                                    <TextBlock Text="{Binding Unit}"
+                                               FontSize="15"
+                                               HorizontalAlignment="Center"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
