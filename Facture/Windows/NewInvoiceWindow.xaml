@@ -1,0 +1,257 @@
+﻿<Window x:Class="Facture.Windows.NewInvoiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Facture.Windows"
+        mc:Ignorable="d"
+        Title="NewInvoiceWindow" Height="600" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Text="New Invoice"
+                   FontSize="35"
+                   FontFamily="Arial Black" />
+        <Border Grid.Row="1"
+                Grid.ColumnSpan="2"
+                BorderBrush="Gray"
+                BorderThickness="2 2 0 2"
+                Padding="8">
+            <Grid Grid.Row="1"
+              Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.ColumnSpan="4"
+                       Text="Bill To"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       FontSize="25"
+                       FontFamily="Arial Black"
+                       TextDecorations="Underline"/>
+                <StackPanel Grid.Row="1">
+                    <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0 0 0 10">
+                        <Label Content="Name:"
+                           FontSize="15"
+                           FontFamily="Arial"/>
+                        <TextBox Width="150"
+                             FontSize="17"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+                        <Label Content="Phone:"
+                           FontSize="15"
+                           FontFamily="Arial"/>
+                        <TextBox Width="150"
+                             FontSize="17"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1"
+                        Grid.Column="2"
+                        HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0 0 0 10">
+                        <Label Content="Address:"
+                           FontSize="15"
+                           FontFamily="Arial"/>
+                        <TextBox Width="150"
+                             FontSize="12"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0 0 0 10">
+                        <Label Content="City:"
+                           FontSize="15"
+                           FontFamily="Arial"/>
+                        <TextBox Width="150"
+                             FontSize="17"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+                        <Label Content="State:"
+                           FontSize="15"
+                           FontFamily="Arial"/>
+                        <TextBox Width="150"
+                             FontSize="17"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+        <Border Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.Column="2"
+                BorderBrush="Gray"
+                BorderThickness="2"
+                Padding="0">
+            <Grid Grid.Row="1"
+                  Grid.RowSpan="2"
+                  Grid.Column="2"
+                  Background="#DCDCDC">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Pick items from this list to add to the invoice."
+                           HorizontalAlignment="Center"
+                           FontSize="15"
+                           FontFamily="Arial Black"
+                           Margin="8 4 8 4"
+                           TextDecorations="Underline"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+                <DataGrid x:Name="itemGridView"
+                          x:FieldModifier="public"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          Grid.Row="1"
+                          Margin="0 10 0 0">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Name" IsReadOnly="True" Width="3*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" FontSize="15"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Price" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock FontSize="15"
+                                               HorizontalAlignment="Center">
+                                        <TextBlock.Text>
+                                            <Binding Path="Price">
+                                                <Binding.StringFormat>
+                                                    {0:c}
+                                                </Binding.StringFormat>
+                                            </Binding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Unit" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Unit}"
+                                               FontSize="15"
+                                               HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+        <Border Grid.Row="2"
+                Grid.ColumnSpan="2"
+                BorderBrush="Gray"
+                BorderThickness="2 0 0 2"
+                Padding="8">
+            <Grid Background="#DCDCDC">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Invoice Items"
+                           HorizontalAlignment="Center"
+                           FontSize="15"
+                           FontFamily="Arial Black"
+                           Margin="8 4 8 4"
+                           TextDecorations="Underline"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+                <DataGrid x:Name="invoiceItemGridView"
+                          x:FieldModifier="public"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          Grid.Row="1"
+                          Margin="0 10 0 0">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Name" IsReadOnly="True" Width="3*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Item.Name}" FontSize="15"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Price" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock FontSize="15"
+                                               HorizontalAlignment="Left">
+                                        <TextBlock.Text>
+                                            <Binding Path="Item.Price">
+                                                <Binding.StringFormat>
+                                                    {0:c}
+                                                </Binding.StringFormat>
+                                            </Binding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Unit" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Item.Unit}"
+                                               FontSize="15"
+                                               HorizontalAlignment="Left"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Quantity" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Quantity}"
+                                               FontSize="15"
+                                               HorizontalAlignment="Left"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Total" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock FontSize="15"
+                                               HorizontalAlignment="Left">
+                                        <TextBlock.Text>
+                                            <Binding Path="Total">
+                                                <Binding.StringFormat>
+                                                    {0:c}
+                                                </Binding.StringFormat>
+                                            </Binding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

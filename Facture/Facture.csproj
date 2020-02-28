@@ -37,8 +37,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SQLite-net, Version=1.6.292.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\sqlite-net-pcl.1.6.292\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLiteNetExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLiteNetExtensions.2.1.0\lib\netstandard1.1\SQLiteNetExtensions.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.batteries_green, Version=1.1.13.388, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.13\lib\net45\SQLitePCLRaw.batteries_green.dll</HintPath>
@@ -51,6 +57,12 @@
     </Reference>
     <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.1.13.388, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.1.13\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=17.4460.0.51, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.17.4.0.51\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=17.4460.0.51, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.WPF.17.4.0.51\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -72,7 +84,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\EditInvoiceItemWindow.xaml.cs">
+      <DependentUpon>EditInvoiceItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NewInvoiceItemWindow.xaml.cs">
+      <DependentUpon>NewInvoiceItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NewInvoiceWindow.xaml.cs">
+      <DependentUpon>NewInvoiceWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Controls\ItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EditInvoiceItemWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,6 +133,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\NewInvoiceItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NewInvoiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

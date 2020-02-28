@@ -37,7 +37,7 @@ namespace Facture.Controls
 
         // Using a DependencyProperty as the backing store for Item.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ItemProperty =
-            DependencyProperty.Register("Item", typeof(Item), typeof(ItemControl), new PropertyMetadata(new Item()  { Name="Floodlight", Price=7.99, Unit="bulb"}, SetText));
+            DependencyProperty.Register("Item", typeof(Item), typeof(ItemControl), new PropertyMetadata(new Item()  { Name="Floodlight", Price=7.99M, Unit="bulb"}, SetText));
 
         private static void SetText(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {

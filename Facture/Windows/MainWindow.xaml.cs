@@ -26,8 +26,15 @@ namespace Facture
             InitializeComponent();
 
             itemsButton.Click += ItemsButton_Click;
+            newInvoiceButton.Click += NewInvoiceButton_Click;
 
             dateLabel.Text = DateTime.Now.ToString("dddd, MMM dd yyyy");
+        }
+
+        private void NewInvoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            NewInvoiceWindow invoiceWindow = new NewInvoiceWindow();
+            invoiceWindow.Show();
         }
 
         private void ItemsButton_Click(object sender, RoutedEventArgs e)

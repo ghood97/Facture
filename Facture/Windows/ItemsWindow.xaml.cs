@@ -49,7 +49,7 @@ namespace Facture.Windows
         private void SaveItemButton_Click(object sender, RoutedEventArgs e)
         {
             string name;
-            double price;
+            decimal price;
             string unit;
 
             // check to make sure string fields arent empty
@@ -57,7 +57,7 @@ namespace Facture.Windows
             {
                 name = newItemNameBox.Text;
                 unit = newItemUnitBox.Text;
-                if (Double.TryParse(newItemPriceBox.Text, out price))
+                if (Decimal.TryParse(newItemPriceBox.Text, out price))
                 {
                     Item item = new Item()
                     {
@@ -100,6 +100,7 @@ namespace Facture.Windows
             }
             if (items != null)
             {
+                items.Sort((x, y) => x.Name.CompareTo(y.Name));
                 itemGridView.ItemsSource = items;
             }
         }

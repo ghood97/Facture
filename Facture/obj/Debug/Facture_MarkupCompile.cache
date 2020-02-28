@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\App.xaml
-4890843880
+7-943474163
 2-1274936136
-11-45110002
-122-1690219467
-Controls\ItemControl.xaml;Windows\EditItemWindow.xaml;Windows\ItemsWindow.xaml;Windows\MainWindow.xaml;
+14-590907410
+1261517216572
+Controls\ItemControl.xaml;Windows\EditInvoiceItemWindow.xaml;Windows\EditItemWindow.xaml;Windows\ItemsWindow.xaml;Windows\MainWindow.xaml;Windows\NewInvoiceItemWindow.xaml;Windows\NewInvoiceWindow.xaml;
 
 False
 
