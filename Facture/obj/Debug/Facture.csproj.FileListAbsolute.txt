@@ -41,3 +41,8 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\bin\Debug\Syncfusion.Sh
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\bin\Debug\Syncfusion.Shared.WPF.xml
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EditInvoiceItemWindow.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EditInvoiceItemWindow.baml
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\InvoicesWindow.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\InvoicesWindow.baml
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\InvoiceControl.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\InvoiceControl.baml

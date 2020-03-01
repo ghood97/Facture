@@ -84,8 +84,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\InvoiceControl.xaml.cs">
+      <DependentUpon>InvoiceControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\EditInvoiceItemWindow.xaml.cs">
       <DependentUpon>EditInvoiceItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\InvoicesWindow.xaml.cs">
+      <DependentUpon>InvoicesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\NewInvoiceItemWindow.xaml.cs">
       <DependentUpon>NewInvoiceItemWindow.xaml</DependentUpon>
@@ -93,6 +99,10 @@
     <Compile Include="Windows\NewInvoiceWindow.xaml.cs">
       <DependentUpon>NewInvoiceWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\InvoiceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\ItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\EditItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\InvoicesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

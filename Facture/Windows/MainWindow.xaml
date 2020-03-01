@@ -28,7 +28,7 @@
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
-            <Button x:Name="viewInvoiceButton"
+            <Button x:Name="viewInvoicesButton"
                     Content="View Invoices"
                     Height="35"
                     FontSize="20"

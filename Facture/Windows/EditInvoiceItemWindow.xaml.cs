@@ -2,6 +2,7 @@
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,11 +23,13 @@ namespace Facture.Windows
     public partial class EditInvoiceItemWindow : Window
     {
         InvoiceItem invoiceItem;
-        public EditInvoiceItemWindow(InvoiceItem invoiceItem)
+        NewInvoiceWindow newInvoiceWindow;
+        public EditInvoiceItemWindow(InvoiceItem invoiceItem, NewInvoiceWindow newInvoiceWindow)
         {
             InitializeComponent();
 
             this.invoiceItem = invoiceItem;
+            this.newInvoiceWindow = newInvoiceWindow;
             this.DataContext = this.invoiceItem;
 
             quantityBox.KeyDown += QuantityBox_KeyDown;
@@ -36,25 +39,20 @@ namespace Facture.Windows
 
         private void DeleteInvoiceItemButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
-            {
-                // Creates the InvoiceItem table. Will be ignored if table already exists.
-                connection.CreateTable<InvoiceItem>();
-                // pass contact to Delete method
-                connection.Delete(this.invoiceItem);
-            }
+            newInvoiceWindow.invoiceItems.Remove(this.invoiceItem);
 
             Close();
         }
 
         private void UpdateQuantityButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+            foreach (InvoiceItem itemToUpdate in newInvoiceWindow.invoiceItems)
             {
-                // Creates the InvoiceItem table. Will be ignored if table already exists.
-                connection.CreateTable<InvoiceItem>();
-                // pass item to Update method
-                connection.Update(this.invoiceItem);
+                if (itemToUpdate.ItemId == this.invoiceItem.ItemId)
+                {
+                    itemToUpdate.Quantity = int.Parse(quantityBox.Text);
+                    break;
+                }
             }
 
             Close();

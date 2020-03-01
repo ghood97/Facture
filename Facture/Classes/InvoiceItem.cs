@@ -13,6 +13,9 @@ namespace Facture.Classes
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
+        [ForeignKey(typeof(Invoice))]
+        public int InvoiceId { get; set; }
+
         [ForeignKey(typeof (Item))]
         public int ItemId { get; set; }
 
@@ -23,7 +26,7 @@ namespace Facture.Classes
 
         public override string ToString()
         {
-            return $"InvoiceID: {Id} Quantity: {Quantity}";
+            return $"InvoiceID: {Id} - ItemId: {ItemId}: Quantity: {Quantity}";
         }
 
         public decimal Total

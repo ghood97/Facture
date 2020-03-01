@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facture.Windows"
         mc:Ignorable="d"
-        Title="NewInvoiceWindow" Height="600" Width="1000">
+        WindowStartupLocation="CenterScreen"
+        Title="NewInvoiceWindow" Height="700" Width="1100">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -16,6 +17,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="3*" />
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="0"
@@ -29,7 +31,7 @@
                 Grid.ColumnSpan="2"
                 BorderBrush="Gray"
                 BorderThickness="2 2 0 2"
-                Padding="8">
+                Padding="0">
             <Grid Grid.Row="1"
               Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
@@ -39,16 +41,18 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.ColumnSpan="4"
-                       Text="Bill To"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Top"
-                       FontSize="25"
-                       FontFamily="Arial Black"
-                       TextDecorations="Underline"/>
+                           Text="Bill To"
+                           HorizontalAlignment="Stretch"
+                           TextAlignment="Center"
+                           VerticalAlignment="Top"
+                           FontSize="27"
+                           FontFamily="Arial Black"
+                           TextDecorations="Underline"
+                           Background="#A9A9A9" />
                 <StackPanel Grid.Row="1">
                     <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Right"
@@ -56,16 +60,18 @@
                         <Label Content="Name:"
                            FontSize="15"
                            FontFamily="Arial"/>
-                        <TextBox Width="150"
-                             FontSize="17"/>
+                        <TextBox x:Name="invoiceNameBox"
+                                 Width="150"
+                                 FontSize="17"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Right">
                         <Label Content="Phone:"
                            FontSize="15"
                            FontFamily="Arial"/>
-                        <TextBox Width="150"
-                             FontSize="17"/>
+                        <TextBox x:Name="invoicePhoneBox"
+                                 Width="150"
+                                 FontSize="17"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -78,8 +84,9 @@
                         <Label Content="Address:"
                            FontSize="15"
                            FontFamily="Arial"/>
-                        <TextBox Width="150"
-                             FontSize="12"/>
+                        <TextBox x:Name="invoiceAddressBox"
+                                 Width="150"
+                                 FontSize="12"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Right"
@@ -87,16 +94,19 @@
                         <Label Content="City:"
                            FontSize="15"
                            FontFamily="Arial"/>
-                        <TextBox Width="150"
-                             FontSize="17"/>
+                        <TextBox x:Name="invoiceCityBox"
+                                 Width="150"
+                                 FontSize="17"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Right">
                         <Label Content="State:"
                            FontSize="15"
                            FontFamily="Arial"/>
-                        <TextBox Width="150"
-                             FontSize="17"/>
+                        <TextBox x:Name="invoiceStateBox"
+                                 Width="150"
+                                 FontSize="17"
+                                 Text="Massachusetts"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -111,16 +121,16 @@
             <Grid Grid.Row="1"
                   Grid.RowSpan="2"
                   Grid.Column="2"
-                  Background="#DCDCDC">
+                  Background="#A9A9A9">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <TextBlock Text="Pick items from this list to add to the invoice."
                            HorizontalAlignment="Center"
-                           FontSize="15"
+                           FontSize="18"
                            FontFamily="Arial Black"
-                           Margin="8 4 8 4"
+                           Margin="0"
                            TextDecorations="Underline"
                            TextWrapping="Wrap"
                            TextAlignment="Center"/>
@@ -171,15 +181,15 @@
                 Grid.ColumnSpan="2"
                 BorderBrush="Gray"
                 BorderThickness="2 0 0 2"
-                Padding="8">
-            <Grid Background="#DCDCDC">
+                Padding="0">
+            <Grid Background="#A9A9A9">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <TextBlock Text="Invoice Items"
                            HorizontalAlignment="Center"
-                           FontSize="15"
+                           FontSize="25"
                            FontFamily="Arial Black"
                            Margin="8 4 8 4"
                            TextDecorations="Underline"
@@ -195,7 +205,7 @@
                         <DataGridTemplateColumn Header="Name" IsReadOnly="True" Width="3*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Item.Name}" FontSize="15"/>
+                                    <TextBlock Text="{Binding Item.Name, Mode=TwoWay}" FontSize="15"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
@@ -253,5 +263,15 @@
                 </DataGrid>
             </Grid>
         </Border>
+        <Button Grid.Row="3"
+                Grid.ColumnSpan="3"
+                x:Name="createInvoiceButton"
+                Height="40"
+                Content="Create Invoice"
+                Background="#4BB543"
+                Foreground="White"
+                FontSize="25"
+                VerticalContentAlignment="Top"
+                HorizontalContentAlignment="Center"/>
     </Grid>
 </Window>

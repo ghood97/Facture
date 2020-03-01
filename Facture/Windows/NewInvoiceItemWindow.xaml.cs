@@ -23,14 +23,15 @@ namespace Facture.Windows
     /// </summary>
     public partial class NewInvoiceItemWindow : Window
     {
-        Item item;
+        Item itemToAdd;
         InvoiceItem invoiceItem;
+        NewInvoiceWindow invoiceWindow;
         public NewInvoiceItemWindow(Item item)
         {
             InitializeComponent();
 
-            this.item = item;
-            this.DataContext = this.item;
+            this.itemToAdd = item;
+            this.DataContext = this.itemToAdd;
 
             quantityBox.KeyDown += QuantityBox_KeyDown;
             addToInvoiceButton.Click += AddToInvoiceButton_Click;
@@ -43,22 +44,23 @@ namespace Facture.Windows
             {
                 if (window.GetType() == typeof(NewInvoiceWindow))
                 {
-                    this.item = (Item)(window as NewInvoiceWindow).itemGridView.SelectedItem;
+                    this.invoiceWindow = (window as NewInvoiceWindow);
                 }
             }
             invoiceItem = new InvoiceItem()
             {
-                ItemId = this.item.Id,
+                ItemId = this.itemToAdd.Id,
+                Item = this.itemToAdd,
                 Quantity = int.Parse(quantityBox.Text)
             };
-
+            invoiceWindow.invoiceItems.Add(invoiceItem);
             // Connects to database -- `using` statement closes connection after
-            using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
-            {
-                // Creates the InvoiceItem table. Will be ignored if table already exists.
-                connection.CreateTable<InvoiceItem>();
-                connection.Insert(invoiceItem);
-            }
+            //using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+            //{
+            //    // Creates the InvoiceItem table. Will be ignored if table already exists.
+            //    connection.CreateTable<InvoiceItem>();
+            //    connection.Insert(invoiceItem);
+            //}
             Close();
         }
 

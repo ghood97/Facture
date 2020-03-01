@@ -8,7 +8,7 @@ using SQLiteNetExtensions.Attributes;
 
 namespace Facture.Classes
 {
-    class Invoice
+    public class Invoice
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
@@ -22,5 +22,10 @@ namespace Facture.Classes
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<InvoiceItem> InvoiceItems { get; set; }
+
+        public override string ToString()
+        {
+            return $"{BillTo} - {Address} - {City}, {State} - {Phone}";
+        }
     }
 }
