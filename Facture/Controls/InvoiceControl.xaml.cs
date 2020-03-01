@@ -41,7 +41,7 @@ namespace Facture.Controls
                 control.dateBlock.Text = (e.NewValue as Invoice).Date.ToShortDateString();
                 control.nameBlock.Text = (e.NewValue as Invoice).BillTo;
                 control.addressBlock.Text = (e.NewValue as Invoice).Address;
-                control.cityBlock.Text = (e.NewValue as Invoice).City;
+                control.cityBlock.Text = (e.NewValue as Invoice).City + ",";
                 control.stateBlock.Text = (e.NewValue as Invoice).State;
                 control.phoneBlock.Text = (e.NewValue as Invoice).Phone;
             }

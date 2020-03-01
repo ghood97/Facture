@@ -20,7 +20,8 @@
                    FontFamily="Arial Black"
                    FontWeight="Bold"/>
         <ListView x:Name="invoiceListView"
-                  Grid.Row="1">
+                  Grid.Row="1"
+                  HorizontalContentAlignment="Stretch">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <uc:InvoiceControl Invoice="{Binding}"/>

@@ -29,6 +29,18 @@ namespace Facture.Windows
 
             GetInvoices();
 
+            invoiceListView.SelectionChanged += InvoiceListView_SelectionChanged;
+
+        }
+
+        private void InvoiceListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Invoice selectedInvoice = (Invoice)invoiceListView.SelectedItem;
+            if (selectedInvoice != null)
+            {
+                // create edit invoice window
+            }
+            GetInvoices();
         }
 
         void GetInvoices()
