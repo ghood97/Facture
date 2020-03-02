@@ -5,6 +5,7 @@ using SQLiteNetExtensions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ namespace Facture
         public MainWindow()
         {
             InitializeComponent();
+            CreateDBFolder();
 
             // DeleteInvoiceAndInvoiceItems();
 
@@ -39,6 +41,13 @@ namespace Facture
             settingsButton.Click += SettingsButton_Click;
 
             dateLabel.Text = DateTime.Now.ToString("dddd, MMM dd yyyy");
+        }
+
+        private void CreateDBFolder()
+        {
+            bool folderExists = Directory.Exists(App.folderPath);
+            if (!folderExists)
+                Directory.CreateDirectory(App.folderPath);
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)

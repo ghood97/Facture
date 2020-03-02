@@ -25,7 +25,7 @@ namespace Facture.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Corey Hood Electric")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string BusinessName {
             get {
                 return ((string)(this["BusinessName"]));
@@ -37,7 +37,7 @@ namespace Facture.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("94 Prospect St")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Address {
             get {
                 return ((string)(this["Address"]));
@@ -49,7 +49,7 @@ namespace Facture.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Norwood")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string City {
             get {
                 return ((string)(this["City"]));
@@ -61,7 +61,7 @@ namespace Facture.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Massachusetts")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string State {
             get {
                 return ((string)(this["State"]));
@@ -73,7 +73,7 @@ namespace Facture.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("7817710008")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Phone {
             get {
                 return ((string)(this["Phone"]));

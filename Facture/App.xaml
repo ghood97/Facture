@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:Facture"
              StartupUri="Windows/MainWindow.xaml">
     <Application.Resources>
-         
+        <LinearGradientBrush x:Key="backgroundGradient" EndPoint="0.504,0.03" StartPoint="0.504,1.5">
+            <GradientStop Color="#FF0099ff" Offset="0"/>
+            <GradientStop Color="#FF99CCFF" Offset="0.567"/>
+        </LinearGradientBrush>
     </Application.Resources>
 </Application>

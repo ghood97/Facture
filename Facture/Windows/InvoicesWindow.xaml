@@ -6,8 +6,9 @@
         xmlns:uc="clr-namespace:Facture.Controls"
         xmlns:local="clr-namespace:Facture.Windows"
         mc:Ignorable="d"
+        Icon="FactureIcon.ico"
         WindowStartupLocation="CenterScreen"
-        Title="Invoices" Height="600" Width="900">
+        Title="Invoices" Height="600" Width="900" Background="{StaticResource backgroundGradient}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -45,7 +46,8 @@
         </Grid>
         <ListView x:Name="invoiceListView"
                   Grid.Row="2"
-                  HorizontalContentAlignment="Stretch">
+                  HorizontalContentAlignment="Stretch"
+                  Background="{StaticResource backgroundGradient}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <uc:InvoiceControl Invoice="{Binding}"/>

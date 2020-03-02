@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facture.Windows"
         mc:Ignorable="d"
+        Icon="FactureIcon.ico"
         Title="Edit Invoice" Height="700" Width="1100">
     <Grid>
         <Grid.ColumnDefinitions>

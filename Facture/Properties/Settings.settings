@@ -3,19 +3,19 @@
   <Profiles />
   <Settings>
     <Setting Name="BusinessName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Corey Hood Electric</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Address" Type="System.String" Scope="User">
-      <Value Profile="(Default)">94 Prospect St</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="City" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Norwood</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="State" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Massachusetts</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Phone" Type="System.String" Scope="User">
-      <Value Profile="(Default)">7817710008</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

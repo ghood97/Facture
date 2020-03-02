@@ -16,5 +16,5 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\App.xaml
 1261517216572
 Controls\InvoiceControl.xaml;Controls\ItemControl.xaml;Windows\EDITEditInvoiceItemWindow.xaml;Windows\EditInvoiceItemWindow.xaml;Windows\EditItemWindow.xaml;Windows\EDITNewInvoiceItemWindow.xaml;Windows\InvoicesWindow.xaml;Windows\InvoiceWindow.xaml;Windows\ItemsWindow.xaml;Windows\MainWindow.xaml;Windows\NewInvoiceItemWindow.xaml;Windows\NewInvoiceWindow.xaml;Windows\SettingsWindow.xaml;
 
-True
+False
 

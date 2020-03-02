@@ -6,52 +6,56 @@
         xmlns:local="clr-namespace:Facture"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Facture" Height="450" Width="800" Background="#DCDCDC">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="2*"/>
-        </Grid.RowDefinitions>
-        <TextBlock x:Name="dateLabel"
+        Icon="FactureIcon.ico"
+        Title="Facture" Height="450" Width="800">
+
+        <Border Background="{StaticResource backgroundGradient}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="dateLabel"
                    Text="Current Date"
                    HorizontalAlignment="Left"
                    Margin="5"
                    FontWeight="Heavy"/>
-        <StackPanel VerticalAlignment="Bottom" Grid.Row="0">
-            <TextBlock Text="Welcome to Facture"
+            <StackPanel VerticalAlignment="Bottom" Grid.Row="0">
+                <TextBlock Text="Welcome to Facture"
                        HorizontalAlignment="Center"
                        FontSize="40"
                        FontFamily="MS Boli"/>
-            <TextBlock Text="Please pick one of the options below"
+                <TextBlock Text="Please pick one of the options below"
                        HorizontalAlignment="Center"
                        FontSize="20"/>
-        </StackPanel>
-        
-        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
-            <Button x:Name="viewInvoicesButton"
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                <Button x:Name="viewInvoicesButton"
                     Content="View Invoices"
                     Height="35"
                     FontSize="20"
                     Margin="0 0 5 0"
                     Background="DarkGray" />
-            <Button x:Name="newInvoiceButton"
+                <Button x:Name="newInvoiceButton"
                     Content="New Invoice"
                     Height="35"
                     FontSize="20"
                     Margin="5 0 5 0"
                     Background="DarkGray" />
-            <Button x:Name="itemsButton"
+                <Button x:Name="itemsButton"
                     Content="Manage Items"
                     Height="35"
                     FontSize="20"
                     Margin="5 0 5 0"
                     Background="DarkGray" />
-            <Button x:Name="settingsButton"
+                <Button x:Name="settingsButton"
                     Content="Settings"
                     Height="35"
                     FontSize="20"
                     Margin="5 0 0 0"
                     Background="DarkGray" />
-        </StackPanel>
-    </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

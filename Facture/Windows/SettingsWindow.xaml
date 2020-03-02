@@ -6,8 +6,9 @@
         xmlns:properties="clr-namespace:Facture.Properties"
         xmlns:local="clr-namespace:Facture.Windows"
         mc:Ignorable="d"
+        Icon="FactureIcon.ico"
         WindowStartupLocation="CenterScreen"
-        Title="Settings" Height="400" Width="500">
+        Title="Settings" Height="400" Width="500" Background="{StaticResource backgroundGradient}">
 
     <Window.Resources>
         <Style TargetType="TextBlock">
@@ -133,7 +134,7 @@
         </Grid>
         <Border Grid.Row="3"
                 BorderBrush="Black"
-                BorderThickness="2 2 2 2"
+                BorderThickness="1 1 1 1"
                 HorizontalAlignment="Right"
                 Margin="0 0 5 5">
             <Button x:Name="saveSettingsButton"
@@ -142,7 +143,8 @@
                 FontSize="15"
                 Background="#4BB543"
                 Foreground="White"
-                FontFamily="Arial"/>
+                FontFamily="Arial"
+                Padding="8"/>
         </Border>
     </Grid>
 </Window>

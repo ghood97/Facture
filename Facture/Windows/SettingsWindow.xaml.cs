@@ -23,8 +23,10 @@ namespace Facture.Windows
         {
             InitializeComponent();
             this.DataContext = Properties.Settings.Default;
-
-            SetPhoneFields();
+            if(Properties.Settings.Default.Phone.Length == 10)
+            {
+                SetPhoneFields();
+            }
 
             areaCodeBox.TextChanged += AreaCodeBox_TextChanged;
             prefixBox.TextChanged += PrefixBox_TextChanged;
@@ -34,7 +36,10 @@ namespace Facture.Windows
         private void SaveSettingsButton_Click(object sender, RoutedEventArgs e)
         {
             string phone = areaCodeBox.Text + prefixBox.Text + lineNumberBox.Text;
-            Properties.Settings.Default.Phone = phone;
+            if(phone.Length == 10)
+            {
+                Properties.Settings.Default.Phone = phone;
+            }
             Properties.Settings.Default.Save();
             Close();
         }

@@ -14,7 +14,9 @@ namespace Facture
     public partial class App : Application
     {
         static string databaseName = "Facture.db";
-        static string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static string subFolderPath = "Facture";
+        static string docFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public static string folderPath = System.IO.Path.Combine(docFolderPath, subFolderPath);
         public static string databasePath = System.IO.Path.Combine(folderPath, databaseName);
     }
 }

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Facture.Windows"
         xmlns:uc="clr-namespace:Facture.Controls"
         mc:Ignorable="d"
+        Icon="FactureIcon.ico"
         WindowStartupLocation="CenterOwner"
         Title="Item Management" Height="425" Width="700">
 
