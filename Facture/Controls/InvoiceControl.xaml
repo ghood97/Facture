@@ -20,48 +20,48 @@
             <StackPanel Margin="0 0 20 0"
                         Grid.Column="0">
                 <TextBlock Text="Date"
-                           FontSize="20"
+                           FontSize="15"
                            FontWeight="Bold"
                            TextDecorations="Underline"/>
                 <TextBlock x:Name="dateBlock"
                            Text="2/29/2020"
-                           FontSize="20"/>
+                           FontSize="15"/>
             </StackPanel>
             <StackPanel Grid.Column="1">
                 <TextBlock Text="Name"
-                        FontSize="20"
+                        FontSize="15"
                         FontWeight="Bold"
                         TextDecorations="Underline"/>
                 <TextBlock x:Name="nameBlock"
                         Text="Corey Hood"
-                        FontSize="20"
+                        FontSize="15"
                         HorizontalAlignment="Left"/>
             </StackPanel>
             <StackPanel Grid.Column="2">
                 <TextBlock Text="Address"
-                           FontSize="20"
+                           FontSize="15"
                            FontWeight="Bold"
                            TextDecorations="Underline"/>
                 <StackPanel>
                     <TextBlock x:Name="addressBlock"
                                Text="94 Prospect St"
-                               FontSize="20"/>
+                               FontSize="15"/>
                     <TextBlock x:Name="cityBlock"
                                Text="Norwood,"
-                               FontSize="20"/>
+                               FontSize="15"/>
                     <TextBlock x:Name="stateBlock"
                                Text="Massachusetts"
-                               FontSize="20"/>
+                               FontSize="15"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Column="3">
                 <TextBlock Text="Phone"
-                            FontSize="20"
+                            FontSize="15"
                             FontWeight="Bold"
                            TextDecorations="Underline"/>
                 <TextBlock x:Name="phoneBlock"
                             Text="781-771-0008"
-                            FontSize="20"/>
+                            FontSize="15"/>
             </StackPanel>
         </Grid>
     </Border>

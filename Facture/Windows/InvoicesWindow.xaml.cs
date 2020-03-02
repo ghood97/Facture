@@ -30,7 +30,21 @@ namespace Facture.Windows
             GetInvoices();
 
             invoiceListView.SelectionChanged += InvoiceListView_SelectionChanged;
+            searchTextBox.TextChanged += SearchTextBox_TextChanged;
 
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // arrow function that gets invoices the contain the text from the text box
+            var filteredList = invoices.Where(c => c.ToString().ToLower().Contains(searchTextBox.Text.ToLower())).ToList();
+
+            // same as above but using query syntax
+            //var filteredList = (from contact in contacts
+            //                    where contact.Name.ToLower().Contains(searchTextBox.Text.ToLower())
+            //                    select contact).ToList();
+
+            invoiceListView.ItemsSource = filteredList;
         }
 
         private void InvoiceListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -48,7 +62,7 @@ namespace Facture.Windows
             using (SQLite.SQLiteConnection connection = new SQLiteConnection(App.databasePath))
             {
                 connection.CreateTable<Invoice>();
-                this.invoices = connection.Table<Invoice>().ToList().OrderBy(x => x.Date).ToList();
+                this.invoices = connection.Table<Invoice>().ToList().OrderByDescending(x => x.Date).ToList();
             }
 
             if(this.invoices != null)

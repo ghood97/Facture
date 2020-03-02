@@ -25,7 +25,7 @@ namespace Facture.Classes
 
         public override string ToString()
         {
-            return $"{BillTo} - {Address} - {City}, {State} - {Phone}";
+            return $"{Date.ToShortDateString()} {BillTo} {Address} {City} {State} {Phone}";
         }
     }
 }
