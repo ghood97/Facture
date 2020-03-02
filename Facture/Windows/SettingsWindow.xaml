@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Facture.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="SettingsWindow" Height="300" Width="500">
+        Title="Settings" Height="400" Width="500">
 
     <Window.Resources>
         <Style TargetType="TextBlock">
@@ -34,11 +34,17 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.2*"/>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <TextBlock Text="Settings"
+                   HorizontalAlignment="Center"
+                   FontSize="30"
+                   FontFamily="Arial Black"
+                   TextDecorations="Underline"/>
 
         <Grid Grid.Row="1"
               Grid.ColumnSpan="2">
@@ -65,7 +71,7 @@
             <TextBox x:Name="businessNameBox"
                      Grid.Column="1"
                      Grid.Row="0"
-                     Text=""
+                     Text="{Binding Source={x:Static properties:Settings.Default}, Path=BusinessName, Mode=TwoWay}"
                      Style="{StaticResource bigTextBoxStyle}"/>
 
             <TextBlock Grid.Column="0"
@@ -75,6 +81,7 @@
             <TextBox x:Name="addressBox"
                      Grid.Column="1"
                      Grid.Row="2"
+                     Text="{Binding Source={x:Static properties:Settings.Default}, Path=Address, Mode=TwoWay}"
                      Style="{StaticResource bigTextBoxStyle}"/>
 
             <TextBlock Grid.Column="0"
@@ -84,6 +91,7 @@
             <TextBox x:Name="cityBox"
                      Grid.Column="1"
                      Grid.Row="4"
+                     Text="{Binding Source={x:Static properties:Settings.Default}, Path=City, Mode=TwoWay}"
                      Style="{StaticResource bigTextBoxStyle}"/>
 
             <TextBlock Grid.Column="0"
@@ -93,6 +101,7 @@
             <TextBox x:Name="stateBox"
                      Grid.Column="1"
                      Grid.Row="6"
+                     Text="{Binding Source={x:Static properties:Settings.Default}, Path=State, Mode=TwoWay}"
                      Style="{StaticResource bigTextBoxStyle}"/>
 
             <TextBlock Grid.Column="0"
@@ -121,21 +130,19 @@
                          Style="{StaticResource phoneTextBoxStyle}"
                          Margin="7 5 7 5"/>
             </StackPanel>
-            <!--<TextBox Grid.Column="1"
-                     Grid.Row="4"
-                     Width="150"
-                     Margin="7"
-                     HorizontalAlignment="Left"
-                     VerticalContentAlignment="Center"/>-->
-
         </Grid>
-        <Button x:Name="saveSettingsButton"
+        <Border Grid.Row="3"
+                BorderBrush="Black"
+                BorderThickness="2 2 2 2"
+                HorizontalAlignment="Right"
+                Margin="0 0 5 5">
+            <Button x:Name="saveSettingsButton"
                 Grid.Row="3"
                 Content="Save Settings"
                 FontSize="15"
                 Background="#4BB543"
                 Foreground="White"
-                FontFamily="Arial"
-                HorizontalAlignment="Right"/>
+                FontFamily="Arial"/>
+        </Border>
     </Grid>
 </Window>

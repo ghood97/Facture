@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Facture.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="NewInvoiceWindow" Height="700" Width="1100">
+        Title="New Invoice" Height="700" Width="1100">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />

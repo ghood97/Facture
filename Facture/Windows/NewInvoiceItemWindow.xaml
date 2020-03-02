@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facture.Windows"
         mc:Ignorable="d"
-        Title="NewInvoiceItemWindow" Height="400" Width="400">
+        Title="New Invoice Item" Height="400" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -83,13 +83,6 @@
                      FontSize="20"
                      Width="80"
                      HorizontalAlignment="Left"/>
-            <Label Grid.Row="5"
-                       Grid.Column="0"
-                       Margin="0 0 0 5"
-                       FontSize="15"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Right"
-                       Content="Total:" />
             <Label x:Name="totalLabel"
                    Grid.Row="5"
                    Grid.Column="1"

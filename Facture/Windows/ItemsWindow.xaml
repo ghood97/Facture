@@ -7,7 +7,7 @@
         xmlns:uc="clr-namespace:Facture.Controls"
         mc:Ignorable="d"
         WindowStartupLocation="CenterOwner"
-        Title="ItemsWindow" Height="425" Width="700">
+        Title="Item Management" Height="425" Width="700">
 
     <Grid Margin="5">
         <Grid.RowDefinitions>

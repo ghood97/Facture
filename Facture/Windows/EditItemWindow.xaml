@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facture.Windows"
         mc:Ignorable="d"
-        Title="EditItemWindow" Height="400" Width="400">
+        Title="Item Management" Height="400" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

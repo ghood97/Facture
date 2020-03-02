@@ -22,8 +22,9 @@ namespace Facture.Windows
         public SettingsWindow()
         {
             InitializeComponent();
+            this.DataContext = Properties.Settings.Default;
 
-            SetFields();
+            SetPhoneFields();
 
             areaCodeBox.TextChanged += AreaCodeBox_TextChanged;
             prefixBox.TextChanged += PrefixBox_TextChanged;
@@ -32,10 +33,6 @@ namespace Facture.Windows
 
         private void SaveSettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.BusinessName = businessNameBox.Text;
-            Properties.Settings.Default.Address = addressBox.Text;
-            Properties.Settings.Default.City = cityBox.Text;
-            Properties.Settings.Default.State = stateBox.Text;
             string phone = areaCodeBox.Text + prefixBox.Text + lineNumberBox.Text;
             Properties.Settings.Default.Phone = phone;
             Properties.Settings.Default.Save();
@@ -58,12 +55,8 @@ namespace Facture.Windows
             }
         }
 
-        private void SetFields()
+        private void SetPhoneFields()
         {
-            businessNameBox.Text = Properties.Settings.Default.BusinessName;
-            addressBox.Text = Properties.Settings.Default.Address;
-            cityBox.Text = Properties.Settings.Default.City;
-            stateBox.Text = Properties.Settings.Default.State;
             string phone = Properties.Settings.Default.Phone;
             areaCodeBox.Text = phone.Substring(0, 3);
             prefixBox.Text = phone.Substring(3, 3);
