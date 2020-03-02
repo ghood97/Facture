@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Facture.Windows
 {
@@ -34,6 +35,17 @@ namespace Facture.Windows
 
         }
 
+        private void InvoiceListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Invoice selectedInvoice = (Invoice)invoiceListView.SelectedItem;
+            if (selectedInvoice != null)
+            {
+                InvoiceWindow invoiceWindow = new InvoiceWindow(selectedInvoice);
+                invoiceWindow.ShowDialog();
+            }
+            GetInvoices();
+        }
+
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             // arrow function that gets invoices the contain the text from the text box
@@ -45,16 +57,6 @@ namespace Facture.Windows
             //                    select contact).ToList();
 
             invoiceListView.ItemsSource = filteredList;
-        }
-
-        private void InvoiceListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Invoice selectedInvoice = (Invoice)invoiceListView.SelectedItem;
-            if (selectedInvoice != null)
-            {
-                // create edit invoice window
-            }
-            GetInvoices();
         }
 
         void GetInvoices()

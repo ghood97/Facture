@@ -1,0 +1,108 @@
+﻿<Window x:Class="Facture.Windows.EDITNewInvoiceItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Facture.Windows"
+        mc:Ignorable="d"
+        Title="EDITNewInvoiceItemWindow" Height="400" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+                   Text="Add Item to Invoice"
+                   HorizontalAlignment="Center"
+                   FontSize="25"
+                   FontWeight="Bold"
+                   Margin="10"/>
+        <Grid Margin="10"
+              Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Content="Name:"
+                       Margin="0 0 0 5"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       HorizontalContentAlignment="Right"/>
+            <Label Grid.Row="1"
+                         Grid.Column="1"
+                         Content="{Binding Name}"
+                         Margin="0 0 0 5"
+                         FontSize="15"/>
+            <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Content="Price: $"
+                       Margin="0 0 0 5"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       HorizontalContentAlignment="Right"/>
+            <Label Grid.Row="2"
+                       Grid.Column="1"
+                       Margin="0 0 0 5"
+                       FontSize="15">
+                <TextBlock Text="{Binding Path=Price, StringFormat={}{0:C}}"/>
+            </Label>
+            <Label Grid.Row="3"
+                       Grid.Column="0"
+                       Content="Unit:"
+                       Margin="0 0 0 5"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       HorizontalContentAlignment="Right"/>
+            <Label Grid.Row="3"
+                       Grid.Column="1"
+                       Content="{Binding Unit}"
+                       Margin="0 0 0 5"
+                       FontSize="15"/>
+            <Label Grid.Row="4"
+                       Grid.Column="0"
+                       Margin="0 0 0 5"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Right"
+                       Content="Enter quantity:" />
+            <TextBox Grid.Row="4"
+                     Grid.Column="1"
+                     x:Name="quantityBox"
+                     Margin="10 0 0 5"
+                     FontSize="20"
+                     Width="80"
+                     HorizontalAlignment="Left"/>
+            <Label Grid.Row="5"
+                       Grid.Column="0"
+                       Margin="0 0 0 5"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Right"
+                       Content="Total:" />
+            <Label x:Name="totalLabel"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   Content=""
+                   Margin="0 0 0 5"
+                   FontSize="15"/>
+            <Button x:Name="addToInvoiceButton"
+                        Grid.Row="6"
+                        Grid.Column="1"
+                        Content="Add to Invoice"
+                        Background="#4BB543"
+                        Foreground="White"
+                        Margin="0 10 0 0"/>
+        </Grid>
+    </Grid>
+</Window>
