@@ -36,8 +36,15 @@ namespace Facture
             itemsButton.Click += ItemsButton_Click;
             newInvoiceButton.Click += NewInvoiceButton_Click;
             viewInvoicesButton.Click += ViewInvoicesButton_Click;
+            settingsButton.Click += SettingsButton_Click;
 
             dateLabel.Text = DateTime.Now.ToString("dddd, MMM dd yyyy");
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.ShowDialog();
         }
 
         private void ViewInvoicesButton_Click(object sender, RoutedEventArgs e)

@@ -52,3 +52,5 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EDITN
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EDITNewInvoiceItemWindow.baml
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EDITEditInvoiceItemWindow.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EDITEditInvoiceItemWindow.baml
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\SettingsWindow.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\SettingsWindow.baml
