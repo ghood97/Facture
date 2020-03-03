@@ -40,7 +40,7 @@ namespace Facture.Windows
             Invoice selectedInvoice = (Invoice)invoiceListView.SelectedItem;
             if (selectedInvoice != null)
             {
-                InvoiceWindow invoiceWindow = new InvoiceWindow(selectedInvoice);
+                DisplayInvoiceWindow invoiceWindow = new DisplayInvoiceWindow(selectedInvoice);
                 invoiceWindow.ShowDialog();
             }
             GetInvoices();
