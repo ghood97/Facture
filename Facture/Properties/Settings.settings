@@ -3,19 +3,19 @@
   <Profiles />
   <Settings>
     <Setting Name="BusinessName" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Business Name</Value>
     </Setting>
     <Setting Name="Address" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Address</Value>
     </Setting>
     <Setting Name="City" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">City</Value>
     </Setting>
     <Setting Name="State" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">State</Value>
     </Setting>
     <Setting Name="Phone" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">xxxxxxxxxx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -21,6 +21,7 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\bin\Debug\Syncfusion.Sh
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.csprojAssemblyReference.cache
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\InvoiceControl.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\ItemControl.g.cs
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\DisplayInvoiceWindow.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EDITEditInvoiceItemWindow.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EditInvoiceItemWindow.g.cs
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EditItemWindow.g.cs
@@ -40,6 +41,7 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture_Marku
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\App.baml
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\InvoiceControl.baml
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Controls\ItemControl.baml
+D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\DisplayInvoiceWindow.baml
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EDITEditInvoiceItemWindow.baml
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EditInvoiceItemWindow.baml
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\EditItemWindow.baml
@@ -59,5 +61,3 @@ D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.appli
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.csproj.CopyComplete
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.exe
 D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Facture.pdb
-D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\DisplayInvoiceWindow.g.cs
-D:\OneDrive\Desktop\Development\Projects\Facture\Facture\obj\Debug\Windows\DisplayInvoiceWindow.baml
